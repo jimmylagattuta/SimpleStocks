@@ -1,0 +1,22 @@
+json.id @add_stock.id
+json.name @add_stock.name
+json.symbol @add_stock.symbol
+json.year_high @add_stock.year_high
+json.year_low @add_stock.year_low
+json.days_percent @add_stock.changein_percent
+json.asking_price @add_stock.asking_price
+json.bidding_price @add_stock.bidding_price
+
+json.set! :stocks do
+	json.array! @all_stocks.each do |item|
+		json.id item.id
+		json.name item.name
+		json.symbol item.symbol
+		json.year_high item.year_high
+		json.year_low item.year_low
+		json.changein_percent item.changein_percent
+		json.asking_price item.asking_price
+		json.bidding_price item.bidding_price
+	end
+end
+

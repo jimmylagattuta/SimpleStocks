@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  date: 2017-06-15
+  symbol: MyString
+  year_high: 1
+  year_low: 1
+  days: MyString
+
+two:
+  name: MyString
+  date: 2017-06-15
+  symbol: MyString
+  year_high: 1
+  year_low: 1
+  days: MyString

@@ -1,0 +1,25 @@
+<h1> Simple Stocks </h1>
+
+
+<div id="app">
+	<br>
+	New Stock: <input type="text" v-model="newStock">
+	<button v-on:click="sendStock"> See Stock </button>
+	<br>
+
+</div>
+<br>
+<% @all_stocks.each do |stock| %>
+	Symbol: <%= stock.symbol %>
+	<br>
+	Name: <%= stock.name %>
+	<br>
+	Asking Price: <%= stock.asking_price %>
+	<br>
+	Bidding Price: <%= stock.bidding_price %>
+	<br>
+	Days Percent: <%= stock.days_percent %>
+	<br>
+	---------------------------------------------
+	<br>
+<% end %>
