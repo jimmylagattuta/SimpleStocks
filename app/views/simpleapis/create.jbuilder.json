@@ -13,3 +13,9 @@ end
 
 json.id @add_stock.id
 json.symbol @add_stock.symbol
+json.name @add_stock.name
+json.asking_price @add_stock.asking_price
+json.bidding_price @add_stock.bidding_price
+json.days_percent @add_stock.days_percent
+json.year_high @add_stock.year_high
+json.year_low @add_stock.year_low

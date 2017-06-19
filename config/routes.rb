@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get "/api/menu" => "simpleapis#index"
   post "/api/create" => "simpleapis#create"
+  post "/api/save" => 'simpleapis#save'
 
 end
 
