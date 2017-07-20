@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  account_name: MyString
+  active: false
+  stock_capital: 9.99
+  days_percent: 9.99
+  stocks: MyString
+  cash_capitol: 9.99
+  days_caitol: 9.99
+
+two:
+  account_name: MyString
+  active: false
+  stock_capital: 9.99
+  days_percent: 9.99
+  stocks: MyString
+  cash_capitol: 9.99
+  days_caitol: 9.99

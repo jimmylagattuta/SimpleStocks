@@ -7,5 +7,11 @@ Rails.application.routes.draw do
   post "/api/create" => "simpleapis#create"
   post "/api/save" => 'simpleapis#save'
 
+  get "/portfolio" => 'portfolios#index'
+  post "/portfolio" => 'portfolios#create'
+  post "/portfolio/sessions" => "sessions#create" 
+  get "/portfolio/sessions/destroy" => "sessions#destroy"
+  get "/user" => "stocks#user"
+
 end
 

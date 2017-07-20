@@ -1,4 +1,4 @@
-<h3><%= button_to "Link To Portfolio Page", "/portfolio", method: :get %></h3>
+<h3><%= button_to "Link To Portfolio Page", "/portfolio", method: :get %>
 
 <h1> Simple Stocks </h1>
 
@@ -18,7 +18,7 @@
 
 <% if !session[:id] %>
 	<div class="loginlogout">
-		<h3>Sign into Account /stocks</h3>
+		<h3>Sign into Account !@port</h3>
 		<%= form_tag "/portfolio/sessions", method: :post do %>
 			<div>
 			Account Name: <input type="text" name="account_name">
@@ -36,8 +36,8 @@
 	</div>
 <% end %>
 <div class="loginlogout">
-	<% if @current_user %>
-		<p> Welcome To Your Account </p>
+	<% if session[:id] %>
+		<p> Welcome To Your Account: <%= @port.account_name %></p>
 		Search Stock By Symbol: <input type="text" v-model="newStock">
 			<button v-on:click="sendStock"> See Stock </button>
 			<br>
@@ -53,5 +53,5 @@
 </div>
 
 <%if session[:id] %>
-	<%= button_to "Sign out of Account #(@current_user.id}", "/portfolio/sessions/destroy", method: :get %>
+	<%= button_to "Sign out of Account", "/portfolio/sessions/destroy", method: :get %>
 <% end %>

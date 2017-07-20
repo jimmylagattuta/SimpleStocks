@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170616045932) do
+ActiveRecord::Schema.define(version: 20170719205715) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "portfolios", force: :cascade do |t|
+    t.string   "account_name"
+    t.boolean  "active"
+    t.decimal  "stock_capital",   precision: 9, scale: 2
+    t.decimal  "days_percent"
+    t.string   "stocks"
+    t.decimal  "cash_capital",    precision: 9, scale: 2
+    t.decimal  "days_capital",    precision: 9, scale: 2
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
+    t.decimal  "retirement",      precision: 9, scale: 2
+    t.string   "password_digest"
+  end
 
   create_table "stocks", force: :cascade do |t|
     t.string   "name"
@@ -27,6 +41,7 @@ ActiveRecord::Schema.define(version: 20170616045932) do
     t.decimal  "bidding_price", precision: 9, scale: 2
     t.boolean  "good_day"
     t.decimal  "days_percent",  precision: 9, scale: 2
+    t.integer  "portfolio_ID"
   end
 
 end
